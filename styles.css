@@ -1,0 +1,46 @@
+.Row {
+    display: table;
+    margin-bottom: 20px;
+}
+
+.Column {
+    display: table-cell;
+    padding-right: 1em;
+    margin-bottom: 10px;
+}
+
+.Column button {
+    width: 100%;
+
+}
+
+.Column label {
+    margin-bottom: 1em;
+}
+
+.Centered {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.CalCheckBox {
+    transform: scale(1.5)
+}
+
+.FullWidthButton {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+span {
+    display: table;
+    margin: 0 auto;
+    text-align: justify;
+    padding-bottom: 5px;
+    width: 20%;
+    color:red;
+    
+
+}

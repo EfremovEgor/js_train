@@ -1,0 +1,63 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Browser</title>
+</head>
+
+<body>
+    <h2>Список продуктов</h2>
+    <form id="product_form">
+        <div class="Row">
+            <div class="Column">
+                <label for="lname" class="Centered">Id:</label>
+                <input type="number" class="Centered" id="id" name="lname">
+            </div>
+            <div class="Column">
+                <label for="fname" class="Centered">Название:</label>
+                <input type="text" class="Centered" id="name" name="fname">
+            </div>
+            <div class="Column">
+                <label for="lname" class="Centered">Калорийность:</label>
+                <input type="number" class="Centered" id="cals" name="lname">
+            </div>
+            <div class="Column">
+                <label for="veg" class="Centered">Вегетарианство:</label>
+                <input type="checkbox" class="Centered" id="is_vegetarian" name="veg">
+            </div>
+            <div class="Column">
+                <label for="lname" class="Centered">Количество:</label>
+                <input type="number" class="Centered" id="amount" name="lname">
+            </div>
+        </div>
+        <div class="FullWidthButton">
+            <button type="button" id="add_btn">Добавить</button>
+            <button type="button" id="clear_btn">Очистить</button>
+        </div>
+        <div id="errors">          
+                
+        </div>
+        </div>
+        </div>
+    </form>
+
+    <table id="product_table">
+        <tr>
+            <th id="id_column">id</th>
+            <th>Название</th>
+            <th id="cals_column">Калорийность</th>
+            <th>Вегетарианский</th>
+            <th id="amount_column">Количество на складе</th>
+        </tr>
+
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
