@@ -1,4 +1,5 @@
 // Функция проверяет поле, подаваемое на вход
+validated = false;
 let validateStrigField = function (fieldName, humanName) {
   // Заводим массив ошибок
   let errors = [];
@@ -112,7 +113,10 @@ $("#rmv").click(function () {
 });
 $("#checkbox").click(function () {
   validateForm();
+  validated = true;
 });
 $("input,textarea").on("keyup change", function () {
-  revalidateForm();
+  if (validated) {
+    revalidateForm();
+  }
 });
