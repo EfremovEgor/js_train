@@ -126,8 +126,8 @@ function check_id_input() {
 }
 
 function clear() {
-  checker();
-  document.getElementById("product_form").reset();
+  Products = [];
+  updateTable(Products);
 }
 
 function sortById() {
