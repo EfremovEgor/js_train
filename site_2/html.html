@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css" type="text/css">
+    <script src="jquery.min.js"></script>
+    <title>LR4</title>
+</head>
+<body>
+    
+    <div class="order_form">
+        <h1 class="title1">Форма заказа</h1>
+        <fieldset><legend>Контактная информация</legend>
+            <form id="contact_form">
+        <table>
+            <tr>
+                <td class="stlb1"><label for="surn">Фамилия:</label></td>
+                <td><input type="text" class="inputs" id="surn" name="surname"></td>
+            </tr>
+            <tr>
+                <td class="stlb1"><label for="name1">Имя:</label></td>
+                <td><input type="text" class="inputs" id="name1" name="name"></td>
+            </tr>
+            <tr>
+                <td class="stlb1"><label for="age2">Возраст:</label></td>
+                <td><input type="number" class="inputs" id="age2" name="age"></td>
+            </tr>
+        
+            <tr>
+                <td class="stlb1"><label for="pol1">Пол:</label></td>
+                <td><label for="pol1"></label><input id="pol" type="radio" checked name="pol">Мужской</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><label for="pol2"></label><input id="pol2" type="radio" name="pol" >Женский</label></td>
+            </tr>
+        </table>
+        </fieldset> 
+
+        <textarea class="text" name="comment"
+        placeholder="Введите коментарий к заказу"></textarea>
+
+        <p><input id="checkbox" type="checkbox" class="check" name="agree">Берите мои данные!</p>
+        <p class="error" id="errorId"></p>
+        <table class="bef">
+            <tr>
+               <td><input class="klick" type="reset" id="rmv" value="Очистить"></td>
+                <td><input class="klick" type="button" id="send_btn"  value="Отправить!" ></td>
+            </tr>
+        </table>
+    </form>
+    <script src="script.js"></script>
+
+    </div>
+
+</body>
+</html>

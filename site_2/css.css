@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family:  Tahoma, sans-serif;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+fieldset{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bbb;
+}
+table{
+    padding: 3px;
+}
+td{
+    padding: 3px;
+}
+
+.order_form{
+width: 308px;
+padding: 20px;
+background-color: #eee;
+border: #999 solid 1px;
+}
+
+.text{
+width: 308px;
+height: 150px;
+}
+
+.klick{
+background-color: #fff;
+padding: 3px 40px 3px 40px;
+color: #999;
+border: 1px solid #bbb;
+margin-right: 5px;
+}
+
+.title1{
+    font-size: 20px;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+.stlb1{
+    text-align: right;
+}
+
+.inputs{
+    color: #999;
+    padding: 3px;
+    width: 200px;
+    border: #bbb 1px solid;
+}
+
+.check{
+    margin: 10px 0 10px 0;
+}
+
+
+.good {
+    background-color: #D0FDD4;
+    border-color: #209F3A;
+}
+
+.bad {
+    background-color: #FDD0D0;
+    border-color: #E74343;
+}
+
+.error {
+    color: #FF2D31;
+    padding-bottom: 5px;
+}
+
+.active {
+    background-color: #209F3A;
+    color: #fff;
+    cursor: pointer;
+}
