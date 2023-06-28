@@ -55,7 +55,7 @@ function addProduct() {
     is_vegetarian: is_vegetarian,
     amount: amount,
   });
-  clear();
+  document.getElementById("product_form").reset();
   sort_by(false);
   updateTable(Products);
 }
