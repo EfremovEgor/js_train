@@ -11,7 +11,6 @@
 
 .Column button {
     width: 100%;
-
 }
 
 .Column label {
@@ -22,25 +21,22 @@
     display: flex;
     justify-content: center;
     margin: auto;
-
 }
 
 .CalCheckBox {
-    transform: scale(1.5)
+    transform: scale(1.5);
 }
 
 .FullWidthButton {
     display: grid;
-    grid-template-columns: 2fr 2fr ;
-
+    grid-template-columns: 2fr 2fr;
 }
+
 span {
     display: table;
     margin: 0 auto;
     text-align: justify;
     padding-bottom: 5px;
     width: 20%;
-    color:red;
-    
-
+    color: red;
 }
