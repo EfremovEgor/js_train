@@ -1,5 +1,7 @@
 document.getElementById("clear_btn").addEventListener("click", clear);
 document.getElementById("add_btn").addEventListener("click", addProduct);
+document.getElementById("add_file_btn").addEventListener("click", addFile);
+document.getElementById("save_file_btn").addEventListener("click", saveFile);
 document.getElementById("id_column").addEventListener("click", sortById);
 document.getElementById("cals_column").addEventListener("click", sortByCals);
 document.getElementById("amount_column").addEventListener("click", sortByAmount);
@@ -13,12 +15,38 @@ let sort_reverse = false;
 let sorted_by = "id";
 let prev_sorted_by = "";
 let Products = [];
+function saveFile(){
+    let a = document.createElement("a");
+    let file = new Blob([JSON.stringify(Products)], {type: 'application/json'});
+    a.href = URL.createObjectURL(file);
+    a.download = "save.json";
+    a.click();
+}
+function addFile(){
+    let input = document.createElement("input")
+    input.type="file"
+    input.accept = ".json"
+    input.onchange = e =>{
+        let file = e.target.files[0]; 
+
+        let reader = new FileReader();
+        reader.readAsText(file,'UTF-8');
+        reader.onload = readerEvent => {
+            let data = readerEvent.target.result;
+            data = JSON.parse(data)
+            Products = data
+            updateTable(Products)
+         }
+
+    }
+    input.click()
+}
 function addProduct() {
-    id = parseInt(document.getElementById("id").value.trim());
-    name_ = document.getElementById("name").value.trim();
-    cals = parseFloat(document.getElementById("cals").value.trim());
-    is_vegetarian = document.getElementById("is_vegetarian").checked;
-    amount = parseInt(document.getElementById("amount").value);
+    let id = parseInt(document.getElementById("id").value.trim());
+    let name_ = document.getElementById("name").value.trim();
+    let cals = parseFloat(document.getElementById("cals").value.trim());
+    let is_vegetarian = document.getElementById("is_vegetarian").checked;
+    let amount = parseInt(document.getElementById("amount").value);
     Products.push({"id":id,"name":name_,"calories":cals,"is_vegetarian":is_vegetarian,"amount":amount});
     clear();
     sort_by(false);
@@ -46,7 +74,7 @@ function create_and_place_error_span(id,text){
     document.getElementById("errors").appendChild(span);
 }
 function check_name_input(){
-    val = document.getElementById("name").value
+    let val = document.getElementById("name").value
     if (val == null ||  val  == "" || (val.length <= 3)){ 
         create_and_place_error_span("name_error","Неверное название")
         }
@@ -57,7 +85,7 @@ function check_name_input(){
     }
 
 function check_amount_input(){
-    val = parseInt(document.getElementById("amount").value)
+    let val = parseInt(document.getElementById("amount").value)
     if (isNaN(val) || val<0){ 
         create_and_place_error_span("amount_error","Неверное количество")
         }
@@ -69,7 +97,7 @@ function check_amount_input(){
     }
 
 function check_cals_input(){
-    val = parseFloat(document.getElementById("cals").value)
+    let val = parseFloat(document.getElementById("cals").value)
     if (isNaN(val) || val<0){ 
         create_and_place_error_span("cals_error","Неверная калорийность")
     }
@@ -79,7 +107,7 @@ function check_cals_input(){
 }
 
 function check_id_input(){
-    val = parseInt(document.getElementById("id").value)
+    let val = parseInt(document.getElementById("id").value)
     if (isNaN(val) || val < 0){ 
         create_and_place_error_span("id_error","Неверный Id")
         }
