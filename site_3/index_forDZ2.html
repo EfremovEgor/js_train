@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>TODO</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 shrink-to-fit=no"
+    />
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      body {
+        /*font-family: 'font', sans-serif;*/
+        font-family: Arial, Verdana, sans-serif;
+        /*}
+
+            .main-content {
+                */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*justify-content: center;*/
+        min-height: 100vh;
+        /*color: #fff;
+                background-color: #070217;*/
+        padding-top: 200px;
+      }
+
+      /*body {
+                position: relative;
+                padding: 100px auto 100px;
+                padding-top: auto;
+            }
+            */
+
+      h1 {
+        font-size: 50px;
+      }
+
+      table {
+        margin-bottom: 20px;
+      }
+
+      td {
+        text-align: center;
+        font-size: 50px;
+      }
+      .answerOk {
+        background-color: green;
+      }
+
+      button.idButtonNewGame {
+        width: 150px;
+        padding: 20px;
+        /*margin-left: 300px;*/
+        margin-top: 30px;
+      }
+
+      form {
+        text-align: center;
+        font-size: 30px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      input {
+        font-size: 30px;
+        text-align: center;
+      }
+
+      div.classCounter {
+        font-size: 50px;
+        font-weight: bold;
+      }
+    </style>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script defer src="main_forDZ2.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        settingsGameFunction();
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Игра в "пары"!!!</h1>
+    <div id="game-app" class="container"></div>
+  </body>
+</html>
